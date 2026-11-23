@@ -23,7 +23,7 @@ import type { CsrfToken } from '@/types'
 // 「withCredentials: true」は、クロスオリジン通信でCookieなどの認証情報を送信できるようにする設定。
 // 「export const api」によって、生成したAxiosインスタンスを他のファイルから利用できるようにする。
 export const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080',
+  baseURL: process.env.NEXT_PUGIC_API_URL || 'http://localhost:8080',
   withCredentials: true,
 })
 
