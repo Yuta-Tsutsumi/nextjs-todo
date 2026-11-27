@@ -5,7 +5,7 @@ import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import useStore from '@/store'
 
-// エラーメッセージ処理
+// APIとの通信ができていない場合のエラーメッセージ処理
 function extractErrorMessage(err: unknown): string {
   if (axios.isAxiosError(err)) {
     const data: unknown = err.response?.data
