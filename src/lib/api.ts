@@ -59,3 +59,8 @@ export async function ensureCsrfToken(): Promise<void> {
   // 取得に失敗した場合は、エラーが呼び出し元に伝わる。
   await csrfPromise
 }
+
+export async function refreshCsrfToken(): Promise<void> {
+  delete api.defaults.headers.common['X-CSRF-Token']
+  await ensureCsrfToken()
+}
